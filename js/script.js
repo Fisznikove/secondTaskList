@@ -29,20 +29,8 @@
         render();
     };
 
-    const render = () => {
-        let htmlString = "";
 
-        for (const task of tasks) {
-            htmlString += `
-            <li ${task.done ? "style=\"text-decoration:line-through\"" : ""}> 
-            <button class=js-done>zrobione?</button>
-          <button class=js-button>usuń zadanie</button> 
-            ${task.content}
-            </li>`
-                ;
-        }
-
-        document.querySelector(".js-tasks").innerHTML = htmlString;
+    const bindEvents = () => {
         const buttonRemove = document.querySelectorAll(".js-button");
         buttonRemove.forEach((buttonRemove, index) => {
             buttonRemove.addEventListener("click", () => {
@@ -59,6 +47,23 @@
             });
 
         });
+    }
+    const render = () => {
+        let htmlString = "";
+
+        for (const task of tasks) {
+            htmlString += `
+            <li ${task.done ? "style=\"text-decoration:line-through\"" : ""}> 
+            <button class=js-done>zrobione?</button>
+          <button class=js-button>usuń zadanie</button> 
+            ${task.content}
+            </li>`
+                ;
+        }
+
+        document.querySelector(".js-tasks").innerHTML = htmlString;
+
+        bindEvents ();
     };
 
 
