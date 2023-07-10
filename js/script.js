@@ -9,22 +9,6 @@
             done: true,
         },
     ];
-    
-
-    const render = () => {
-        let htmlString = "";
-
-        for (const task of tasks) {
-            htmlString += `
-            <li ${task.done ? "style=\"text-decoration:line-through\"" : ""}> 
-            ${task.content}
-            </li>`
-                ;
-        }
-
-        document.querySelector(".js-tasks").innerHTML = htmlString;
-    };
-
 
     const addNewTask = (newTaskContent) => {
         tasks.push({
@@ -33,6 +17,38 @@
 
         render();
     };
+
+    const removeTask = (index) => {
+        tasks.splice(index, 1);
+        render();
+    };
+    
+    const render = () => {
+        let htmlString = "";
+
+        for (const task of tasks) {
+            htmlString += `
+            <li ${task.done ? "style=\"text-decoration:line-through\"" : ""}> 
+          <button class=js-button>usuń zadanie</button> 
+            ${task.content}
+            </li>`
+                ;
+        }
+
+        document.querySelector(".js-tasks").innerHTML = htmlString;
+        const buttonRemove = document.querySelectorAll(".js-button");
+        buttonRemove.forEach((buttonRemove, index) => {
+            buttonRemove.addEventListener("click", () => {
+                removeTask(index);
+            });
+
+        });
+    };
+
+
+
+
+
 
     const onFormSubmit = (event) => {
         event.preventDefault();
