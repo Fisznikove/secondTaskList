@@ -1,0 +1,18 @@
+.list__item--done {
+    text-decoration: line-through;
+}
+
+.list__button {
+
+}
+
+.list__button--done {
+background-color: green;
+}
+
+.list__button--remove {
+background-color: red;
+}
+
+
+
