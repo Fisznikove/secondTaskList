@@ -1,0 +1,31 @@
+.section {
+    background-color: white;
+}
+
+.section__header {
+    border-bottom: 1px solid #eee;
+    padding: 20px;
+    margin-bottom: 0px;
+   
+}
+
+.section__list {
+padding: 10px;
+    list-style: none; 
+
+}
+.section__form {
+    display: grid;
+    grid-template-columns: 5fr 1fr;
+    grid-gap: 10px;
+    background-color: white;
+    padding: 20px;
+}
+
+
+@media (max-width: 767px) {
+    .section__form {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+}

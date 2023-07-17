@@ -1,0 +1,32 @@
+
+.list__item {
+    display: grid;
+    grid-template-columns: auto 5fr auto; 
+    grid-gap: 10px;
+    align-items: center;
+    border-bottom: 1px solid #eee;
+    padding:10px;
+}
+
+.list__item--done {
+    text-decoration: line-through;
+}
+
+.list__button {
+    color:white;
+    border:none;
+    padding:5px;
+    width: 30px;
+    height: 30px;
+}
+
+.list__button:active {
+    border:solid black 1px;
+}
+.list__button--done {
+background-color: green;
+}
+
+.list__button--remove {
+background-color: red;
+}

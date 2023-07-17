@@ -39,15 +39,17 @@
 
         });
     };
-
+    
     const render = () => {
         let htmlString = "";
 
         for (const task of tasks) {
             htmlString += `
-            <li class="list__item ${task.done ? "list__item--done" : ""}" > 
-            <button class="js-done list__button list__button--done">✔</button>
-            ${task.content}<button class="js-button list__button list__button--remove">🗑</button> 
+            <li class="list__item"> 
+             <button class="js-done list__button list__button--done">✔</button>
+            <span class="task__list ${task.done ? "list__item--done" : ""}" > 
+            ${task.content}</span>
+            <button class="js-button list__button list__button--remove">🗑</button> 
             </li>`
         }
 
@@ -71,6 +73,7 @@
         cleanForm.focus();
 
     };
+
 
     const init = () => {
         render();

@@ -1,18 +1,19 @@
-.list__item--done {
-    text-decoration: line-through;
+html {
+    box-sizing: border-box;
 }
 
-.list__button {
-
+*, ::after, ::before {
+    box-sizing: inherit;
 }
 
-.list__button--done {
-background-color: green;
+.body {
+    background-color: #eee;
+    font-family: 'Montserrat';
+    max-width: 1000px;
+    margin: 0 auto;
+    word-break: break-word;
 }
 
-.list__button--remove {
-background-color: red;
-}
 
 
 
