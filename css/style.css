@@ -13,8 +13,8 @@ html {
     margin: 0 auto;
     word-break: break-word;
 }
- .header {
-    margin: 10px;
- }
-
+ 
+.main {
+    margin:10px;
+}
 

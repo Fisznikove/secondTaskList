@@ -1,0 +1,23 @@
+.header__buttons {
+    color:teal;
+    border:none;
+    background-color: white;
+    font-size: 18px;
+}
+
+
+.tasks__button--hiddenAllDone:disabled{
+color:#ccc
+}
+
+
+.section__buttons {
+    display: grid;
+    grid-template-columns: auto auto;
+}
+
+@media(max-width: 767px) {
+    .section__buttons {
+        grid-template-columns: 1fr;
+    }
+}

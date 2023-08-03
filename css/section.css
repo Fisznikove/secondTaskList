@@ -1,5 +1,6 @@
 .section {
     background-color: white;
+    margin-bottom: 10px;
 }
 
 .section__header {
@@ -26,6 +27,18 @@ padding: 10px;
 @media (max-width: 767px) {
     .section__form {
         display: grid;
+        grid-template-columns: 1fr;
+    }
+}
+
+.section__conteiner {
+    display:grid;
+    grid-template-columns: 1fr auto auto;
+  
+}
+
+@media (max-width: 767px) {
+    .section__conteiner {
         grid-template-columns: 1fr;
     }
 }
