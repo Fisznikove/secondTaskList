@@ -1,13 +1,4 @@
-.form__button {
-    padding: 10px;
-    background-color: teal;
-    color: white;
-    border: none;
-}
 
-.form__button:hover {
-    background-color: hsl(180, 100%, 30%);
-}
 .form__input {
     border: 1px solid #ddd;
     padding: 10px;

@@ -12,24 +12,6 @@
     text-decoration: line-through;
 }
 
-.list__button {
-    color:white;
-    border:none;
-    padding:5px;
-    width: 30px;
-    height: 30px;
-}
-
-.list__button:active {
-    border:solid black 1px;
-}
-.list__button--done {
-background-color: green;
-}
-
-.list__button--remove {
-background-color: red;
-}
 .tasks__item--hidden {
     display: none;
 }
